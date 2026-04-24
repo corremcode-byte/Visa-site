@@ -233,6 +233,12 @@ p{font-size:17px;line-height:1.7;color:var(--txt-b)}
 .svc-img-wrap{position:relative}
 .svc-img-wrap img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:var(--r-xl);box-shadow:var(--sh-lg);display:block}
 .svc-img-badge{position:absolute;bottom:18px;left:18px;background:#fff;border-radius:var(--r-f);padding:9px 18px;font-family:var(--font-poppins,'Poppins',sans-serif);font-size:13px;font-weight:600;color:var(--g700);box-shadow:var(--sh-md)}
+.other-slideshow-wrap{position:relative;border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-lg);aspect-ratio:3/2;width:100%}
+.other-slide{position:absolute;inset:0;opacity:0;transition:opacity 0.8s ease;pointer-events:none}
+.other-slide.active{opacity:1;pointer-events:auto}
+.other-dots{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:2}
+.other-dot{width:10px;height:10px;border-radius:50%;border:2px solid #fff;background:transparent;cursor:pointer;transition:background 0.3s;padding:0;-webkit-tap-highlight-color:transparent}
+.other-dot.active{background:#fff}
 .svc-content .badge{margin-bottom:14px}
 .svc-content h2{margin-bottom:12px}
 .svc-content>p{color:var(--txt-m);margin-bottom:20px;font-size:16px}
@@ -318,14 +324,20 @@ p{font-size:17px;line-height:1.7;color:var(--txt-b)}
 
 /* ── Floating Buttons ── */
 @keyframes float-pop{0%{opacity:0;transform:scale(0) translateY(20px)}70%{transform:scale(1.15) translateY(-4px)}100%{opacity:1;transform:scale(1) translateY(0)}}
-.float-wrap{position:fixed;bottom:26px;right:26px;z-index:998;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
-.float-btn{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,0.22);transition:var(--tr);border:none;position:relative;text-decoration:none;flex-shrink:0;color:#fff;opacity:0;animation:float-pop 0.5s cubic-bezier(0.34,1.56,0.64,1) forwards}
+@keyframes float-pulse{0%{transform:scale(1);opacity:0.7}70%{transform:scale(1.6);opacity:0}100%{transform:scale(1.6);opacity:0}}
+.float-wrap{position:fixed;bottom:26px;right:26px;z-index:998;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+.float-btn{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;border:2.5px solid #111 !important;box-shadow:0 6px 24px rgba(0,0,0,0.4),0 2px 8px rgba(0,0,0,0.25) !important;position:relative;text-decoration:none;flex-shrink:0;color:#111;opacity:0;animation:float-pop 0.5s cubic-bezier(0.34,1.56,0.64,1) forwards;transition:transform 0.3s ease,box-shadow 0.3s ease}
+.float-btn::after{content:'';position:absolute;inset:-2px;border-radius:50%;border:2px solid rgba(0,0,0,0.5);animation:float-pulse 2s ease-out infinite;pointer-events:none}
 .float-btn:nth-child(1){animation-delay:0.2s}
 .float-btn:nth-child(2){animation-delay:0.4s}
 .float-btn:nth-child(3){animation-delay:0.6s}
-.float-btn svg{fill:#fff}
-.float-btn:hover{transform:scale(1.1);box-shadow:0 6px 24px rgba(0,0,0,0.28)}
-.fb-tip{position:absolute;right:64px;top:50%;transform:translateY(-50%);background:rgba(15,23,42,0.92);color:#fff;font-size:12px;font-weight:600;font-family:var(--font-poppins,'Poppins',sans-serif);padding:5px 12px;border-radius:var(--r-f);white-space:nowrap;opacity:0;pointer-events:none;transition:opacity 0.2s}
+.float-btn:nth-child(1)::after{animation-delay:0s}
+.float-btn:nth-child(2)::after{animation-delay:0.4s}
+.float-btn:nth-child(3)::after{animation-delay:0.8s}
+.float-btn svg{fill:#111 !important}
+.float-btn:hover{transform:scale(1.13);box-shadow:0 12px 36px rgba(0,0,0,0.5),0 4px 12px rgba(0,0,0,0.3) !important}
+.float-btn:hover::after{animation:none;opacity:0}
+.fb-tip{position:absolute;right:68px;top:50%;transform:translateY(-50%);background:#111;color:#fff;font-size:12px;font-weight:600;font-family:var(--font-poppins,'Poppins',sans-serif);padding:5px 12px;border-radius:var(--r-f);white-space:nowrap;opacity:0;pointer-events:none;transition:opacity 0.2s}
 .float-btn:hover .fb-tip{opacity:1}
 
 /* ── Enquiry Modal ── */
