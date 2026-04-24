@@ -180,21 +180,21 @@ export default function AdminDashboard() {
                   return (
                     <tr key={e.id} className={`admin-row ${lead}`}>
                       <td className="admin-td-num">{filtered.length - i}</td>
-                      <td className="admin-td-name">{e.name}</td>
-                      <td>
+                      <td className="admin-td-name" data-label="Name">{e.name}</td>
+                      <td data-label="Phone">
                         <a href={`tel:${e.phone}`} className="admin-phone">{e.phone}</a>
                       </td>
-                      <td>{e.destination || <span style={{ color: 'var(--txt-m)' }}>—</span>}</td>
-                      <td>{formatDate(e.travelDate)}</td>
-                      <td>
+                      <td data-label="Destination">{e.destination || <span style={{ color: 'var(--txt-m)' }}>—</span>}</td>
+                      <td data-label="Travel Date">{formatDate(e.travelDate)}</td>
+                      <td data-label="Days Left">
                         {days !== null ? (
                           <span className={days <= 0 ? 'admin-days-past' : days <= 30 ? 'admin-days-hot' : ''}>
                             {days <= 0 ? 'Passed' : `${days}d`}
                           </span>
                         ) : <span style={{ color: 'var(--txt-m)' }}>—</span>}
                       </td>
-                      <td><span className={`lead-badge ${lead}`}>{LEAD_LABELS[lead]}</span></td>
-                      <td className="admin-td-time">{formatTime(e.submittedAt)}</td>
+                      <td data-label="Lead"><span className={`lead-badge ${lead}`}>{LEAD_LABELS[lead]}</span></td>
+                      <td className="admin-td-time" data-label="Submitted">{formatTime(e.submittedAt)}</td>
                     </tr>
                   )
                 })}

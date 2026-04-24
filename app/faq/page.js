@@ -97,23 +97,6 @@ export default function FAQPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="cta-banner">
-        <div className="container">
-          <h2>Ready to Take the Next Step?</h2>
-          <p>Check your eligibility in 2 minutes, or speak to our team directly.</p>
-          <div className="cta-btns">
-            <Link href="/contact" className="btn btn-white btn-lg">Get Free Advice</Link>
-            <a
-              href="https://wa.me/918796925533?text=Hello%2C%20I%20want%20to%20start%20my%20visa%20application."
-              target="_blank" rel="noopener"
-              className="btn btn-wa btn-lg"
-            >
-              💬 WhatsApp Us
-            </a>
-          </div>
-        </div>
-      </section>
     </>
   )
 }

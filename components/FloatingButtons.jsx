@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 
-const INITIAL = { name: '', phone: '', destination: '', travelDate: '' }
+const INITIAL = { name: '', phone: '', destination: '', travelDate: '', message: '' }
 
 export default function FloatingButtons() {
   const [panelOpen, setPanelOpen] = useState(false)
@@ -92,6 +92,13 @@ export default function FloatingButtons() {
                     <input type="date" id="eq-date" name="travelDate" className="finput"
                       value={form.travelDate} onChange={set} />
                   </div>
+                  <div className="fg">
+                    <label htmlFor="eq-msg">Your Message</label>
+                    <textarea id="eq-msg" name="message" className="finput"
+                      placeholder="Tell us briefly about your travel plan..."
+                      value={form.message} onChange={set}
+                      rows={3} style={{ resize: 'vertical' }} />
+                  </div>
                   {error && <p style={{ fontSize: 13, color: '#DC2626', marginBottom: 10 }}>{error}</p>}
                   <button type="submit" disabled={loading} className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
                     {loading ? 'Submitting…' : 'Submit Enquiry'}
@@ -137,18 +144,18 @@ export default function FloatingButtons() {
         {/* Enquiry form toggle */}
         <button
           className="float-btn"
-          style={{ background: panelOpen ? 'var(--g800)' : 'var(--g600)' }}
+          style={{ background: '#fff', boxShadow: '0 4px 18px rgba(0,0,0,0.18)' }}
           aria-label="Open quick enquiry form"
           aria-expanded={panelOpen}
           onClick={() => (panelOpen ? closePanel() : openPanel())}
         >
           <span className="fb-tip">{panelOpen ? 'Close' : 'Quick Enquiry'}</span>
           {panelOpen ? (
-            <svg viewBox="0 0 24 24" fill="white" width="22" height="22" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" style={{ fill: '#111' }} aria-hidden="true">
               <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
             </svg>
           ) : (
-            <svg viewBox="0 0 24 24" fill="white" width="24" height="24" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" style={{ fill: '#111' }} aria-hidden="true">
               <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12zM7 9h10v2H7zm0-3h10v2H7zm0 6h7v2H7z" />
             </svg>
           )}

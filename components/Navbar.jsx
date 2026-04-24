@@ -75,9 +75,9 @@ export default function Navbar() {
             {/* Hamburger */}
             <button
               className="hamburger"
-              aria-label="Open menu"
+              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={menuOpen}
-              onClick={() => setMenuOpen(true)}
+              onClick={() => setMenuOpen(prev => !prev)}
             >
               <span /><span /><span />
             </button>

@@ -73,7 +73,6 @@ export default function ServicesPage() {
               <div className="svc-note">
                 Note: Document requirements vary by country. We provide a personalised checklist based on your destination.
               </div>
-              <a href="https://wa.me/918796925533?text=Hello%2C%20I%20need%20help%20with%20a%20Tourist%20Visa." target="_blank" rel="noopener" className="btn btn-primary">💬 Enquire on WhatsApp</a>
             </div>
           </div>
         </div>
@@ -124,7 +123,6 @@ export default function ServicesPage() {
               <div className="svc-note">
                 Note: Invitation letter formats and requirements can differ depending on the country. Don&apos;t worry — we&apos;ll guide you on exactly what&apos;s needed and help you get it right.
               </div>
-              <a href="https://wa.me/918796925533?text=Hello%2C%20I%20need%20help%20with%20a%20Business%20Visa." target="_blank" rel="noopener" className="btn btn-primary">💬 Enquire on WhatsApp</a>
             </div>
           </div>
         </div>
@@ -165,61 +163,162 @@ export default function ServicesPage() {
               <div className="svc-note">
                 Student visas can get tricky — especially when it comes to SOPs and financial documents. We&apos;ll guide you through both, step by step, to avoid common mistakes and improve your chances of approval.
               </div>
-              <a href="https://wa.me/918796925533?text=Hello%2C%20I%20need%20help%20with%20a%20Student%20Visa." target="_blank" rel="noopener" className="btn btn-primary">💬 Enquire on WhatsApp</a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── OTHER VISAS ── */}
-      <section className="svc-section alt" id="other" aria-labelledby="other-heading">
+      {/* ── TRANSIT VISA ── */}
+      <section className="svc-section alt" id="transit" aria-labelledby="transit-heading">
         <div className="container">
-          <div className="sec-hdr fade-up">
-            <div className="badge">🌍 Specialised Visas</div>
-            <h2 id="other-heading">Other Visa Services We Handle</h2>
-            <p>Not every visa fits into a standard category — and that&apos;s okay. We also assist with a range of specialised visas, depending on your needs.</p>
-          </div>
-          <div className="sub-visa-grid fade-up">
-            {[
-              { ico: '🔁', title: 'Transit Visa', href: 'Transit+Visa', desc: 'Just passing through a country? If your layover requires a transit visa, we\'ll help you sort it quickly and without confusion.' },
-              { ico: '🏥', title: 'Medical Visa', href: 'Medical+Visa', desc: 'Travelling abroad for treatment? We assist with medical visa applications for patients and their attendants, including hospital documents, treatment details, and financial proof.' },
-              { ico: '🕌', title: 'Religious Visa', href: 'Religious+Visa', desc: 'Planning a pilgrimage — whether it\'s Mecca, the Vatican, or elsewhere? We handle the specific visa requirements so you can focus on your journey.' },
-              { ico: '👨‍👩‍👧', title: 'Dependent / Family Visa', href: 'Dependent+Family+Visa', desc: 'Joining family abroad? We guide you through the entire process, making sure all relationship and sponsor documents are in place.' },
-            ].map(({ ico, title, href, desc }) => (
-              <div key={title} className="sub-card">
-                <div className="sub-ico">{ico}</div>
-                <h3 className="sub-title">{title}</h3>
-                <p className="sub-desc">{desc}</p>
-                <a
-                  href={`https://wa.me/918796925533?text=Hello%2C%20I%20need%20help%20with%20a%20${href}.`}
-                  target="_blank" rel="noopener"
-                  className="btn btn-outline btn-sm"
-                  style={{ marginTop: '14px' }}
-                >
-                  Enquire →
-                </a>
+          <div className="svc-inner rev">
+            <div className="svc-img-wrap fade-up">
+              <Image src="/transit visa.png" alt="Traveller at airport transit — Transit Visa Services"
+                width={560} height={370} loading="lazy"
+                style={{ width: '100%', height: '370px', objectFit: 'cover', borderRadius: '28px', boxShadow: 'var(--sh-lg)' }} />
+              <div className="svc-img-badge">🔁 Transit Visa</div>
+            </div>
+            <div className="svc-content fade-up">
+              <div className="badge">🔁 Transit Visa</div>
+              <h2 id="transit-heading">Transit Visa</h2>
+              <p>Just passing through a country on your way to your final destination? Many countries require a transit visa even for short layovers. We make sure you&apos;re covered. Ideal for:</p>
+              <ul className="svc-list">
+                <li>Travellers with layovers requiring a transit visa</li>
+                <li>Multi-leg international journeys</li>
+                <li>Connecting flights through Schengen or UK airports</li>
+              </ul>
+              <div className="svc-docs">
+                <h4>Documents Commonly Required</h4>
+                <ul>
+                  <li>Valid passport with sufficient validity</li>
+                  <li>Confirmed onward flight tickets</li>
+                  <li>Visa for the final destination country</li>
+                  <li>Proof of accommodation (if overnight stay)</li>
+                  <li>Passport-size photographs</li>
+                </ul>
               </div>
-            ))}
-          </div>
-          <div style={{ marginTop: '36px', maxWidth: '700px', marginLeft: 'auto', marginRight: 'auto' }}>
-            <div className="svc-note" style={{ textAlign: 'center' }}>
-              Each country has its own requirements for these visas. Once we understand your situation, we&apos;ll share a clear, personalised checklist — so you know exactly what to prepare.
+              <div className="svc-note">
+                Transit visa rules vary widely by country and nationality. Tell us your itinerary and we&apos;ll confirm exactly what you need.
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section className="cta-banner">
+      {/* ── MEDICAL VISA ── */}
+      <section className="svc-section" id="medical" aria-labelledby="medical-heading">
         <div className="container">
-          <h2>Not sure which visa you need?</h2>
-          <p>Tell us your destination and purpose — we&apos;ll guide you to the right visa category and checklist.</p>
-          <div className="cta-btns">
-            <Link href="/contact" className="btn btn-white btn-lg">Get Free Advice</Link>
-            <a href="https://wa.me/918796925533?text=Hello%2C%20I%20need%20visa%20guidance." target="_blank" rel="noopener" className="btn btn-wa btn-lg">💬 WhatsApp Us</a>
+          <div className="svc-inner">
+            <div className="svc-img-wrap fade-up">
+              <Image src="/Medical visa.png" alt="Patient travelling for medical treatment — Medical Visa Services"
+                width={560} height={370} loading="lazy"
+                style={{ width: '100%', height: '370px', objectFit: 'cover', borderRadius: '28px', boxShadow: 'var(--sh-lg)' }} />
+              <div className="svc-img-badge">🏥 Medical Visa</div>
+            </div>
+            <div className="svc-content fade-up">
+              <div className="badge">🏥 Medical Visa</div>
+              <h2 id="medical-heading">Medical Visa</h2>
+              <p>Travelling abroad for treatment or a medical procedure? We assist patients and their attendants in obtaining medical visas efficiently, handling all the paperwork so you can focus on your health. Ideal for:</p>
+              <ul className="svc-list">
+                <li>Patients seeking specialised treatment abroad</li>
+                <li>Accompanying attendants or family members</li>
+                <li>Follow-up medical visits and post-treatment check-ups</li>
+              </ul>
+              <div className="svc-docs">
+                <h4>Documents Commonly Required</h4>
+                <ul>
+                  <li>Valid passport</li>
+                  <li>Letter from the treating hospital abroad</li>
+                  <li>Medical diagnosis and referral letter from an Indian doctor</li>
+                  <li>Proof of sufficient funds for treatment and stay</li>
+                  <li>Passport-size photographs</li>
+                  <li>Attendant&apos;s documents (if applicable)</li>
+                </ul>
+              </div>
+              <div className="svc-note">
+                Medical visas are often time-sensitive. Contact us immediately and we&apos;ll prioritise your application.
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* ── RELIGIOUS VISA ── */}
+      <section className="svc-section alt" id="religious" aria-labelledby="religious-heading">
+        <div className="container">
+          <div className="svc-inner rev">
+            <div className="svc-img-wrap fade-up">
+              <Image src="/religious.jpeg" alt="Pilgrims on a religious journey — Religious Visa Services"
+                width={560} height={370} loading="lazy"
+                style={{ width: '100%', height: '370px', objectFit: 'cover', borderRadius: '28px', boxShadow: 'var(--sh-lg)' }} />
+              <div className="svc-img-badge">🕌 Religious Visa</div>
+            </div>
+            <div className="svc-content fade-up">
+              <div className="badge">🕌 Religious Visa</div>
+              <h2 id="religious-heading">Religious Visa</h2>
+              <p>Planning a pilgrimage or a spiritually significant journey abroad? Whether it&apos;s Hajj, Umrah, a Vatican visit, or any other religious destination, we handle the specific visa requirements with care. Ideal for:</p>
+              <ul className="svc-list">
+                <li>Hajj and Umrah pilgrims</li>
+                <li>Pilgrimages to religious sites in Europe, the Middle East, and beyond</li>
+                <li>Individuals attending religious conferences or events abroad</li>
+              </ul>
+              <div className="svc-docs">
+                <h4>Documents Commonly Required</h4>
+                <ul>
+                  <li>Valid passport</li>
+                  <li>Invitation or confirmation letter from a religious institution</li>
+                  <li>Proof of religious affiliation (if applicable)</li>
+                  <li>Return flight tickets and accommodation proof</li>
+                  <li>Bank statements and financial proof</li>
+                  <li>Passport-size photographs</li>
+                </ul>
+              </div>
+              <div className="svc-note">
+                Requirements differ by destination and religion. We&apos;ll guide you through the process specific to your pilgrimage.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAMILY / DEPENDENT VISA ── */}
+      <section className="svc-section" id="family" aria-labelledby="family-heading">
+        <div className="container">
+          <div className="svc-inner">
+            <div className="svc-img-wrap fade-up">
+              <Image src="/family visa.png" alt="Family reuniting abroad — Dependent and Family Visa Services"
+                width={560} height={370} loading="lazy"
+                style={{ width: '100%', height: '370px', objectFit: 'cover', borderRadius: '28px', boxShadow: 'var(--sh-lg)' }} />
+              <div className="svc-img-badge">👨‍👩‍👧 Family Visa</div>
+            </div>
+            <div className="svc-content fade-up">
+              <div className="badge">👨‍👩‍👧 Dependent / Family Visa</div>
+              <h2 id="family-heading">Dependent / Family Visa</h2>
+              <p>Joining a spouse, parent, or child who is living or working abroad? Family and dependent visas involve detailed documentation around relationships and sponsorship. We make the process clear and stress-free. Ideal for:</p>
+              <ul className="svc-list">
+                <li>Spouses and children joining a working professional abroad</li>
+                <li>Parents visiting or settling with children overseas</li>
+                <li>Dependent family members of students or residents</li>
+              </ul>
+              <div className="svc-docs">
+                <h4>Documents Commonly Required</h4>
+                <ul>
+                  <li>Valid passport for all applicants</li>
+                  <li>Proof of relationship (marriage certificate, birth certificate)</li>
+                  <li>Sponsor&apos;s visa, work permit, or residence proof abroad</li>
+                  <li>Sponsor&apos;s financial statements and employment proof</li>
+                  <li>Accommodation proof in the destination country</li>
+                  <li>Passport-size photographs</li>
+                </ul>
+              </div>
+              <div className="svc-note">
+                Family visa requirements vary significantly by country. We review your sponsor&apos;s documents carefully to avoid delays or rejections.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </>
   )
 }

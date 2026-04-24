@@ -6,11 +6,6 @@ export const metadata = {
   description: 'Contact Zeno Global visa consultants in New Delhi. Call 011 4504 0637, WhatsApp 8796925533, or visit us at Pusa Road. We respond quickly — reach out today.',
 }
 
-const afterCallSteps = [
-  { n: '01', title: 'We Listen First', desc: 'You tell us your destination, purpose, and travel timeline. No forms, no pressure — just a conversation.' },
-  { n: '02', title: 'We Assess Your Case', desc: 'Based on your profile, we tell you which visa applies, what documents you need, and what to expect.' },
-  { n: '03', title: 'You Get a Clear Plan', desc: "We walk you through next steps — whether that's starting your application, gathering documents, or waiting for the right time." },
-]
 
 export default function ContactPage() {
   return (
@@ -67,41 +62,16 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FORM + AFTER CALL */}
+      {/* FORM */}
       <section className="section section-light" aria-labelledby="contact-form-heading">
         <div className="container">
-          <div className="contact-grid">
-            {/* Form */}
-            <div className="contact-form-box fade-up">
-              <div className="badge" style={{ marginBottom: '14px' }}>Quick Enquiry</div>
-              <h3 id="contact-form-heading" style={{ marginBottom: '6px' }}>Send Us a Message</h3>
-              <p className="sub-txt">
-                Fill in your details and we&apos;ll open WhatsApp with your message pre-filled — fast and easy.
-              </p>
-              <ContactForm />
-            </div>
-
-            {/* After call */}
-            <div className="fade-up">
-              <div className="badge" style={{ marginBottom: '14px' }}>What Happens Next</div>
-              <h3 style={{ marginBottom: '10px' }}>What Happens After You Reach Out?</h3>
-              <p style={{ fontSize: '15px', color: 'var(--txt-m)', marginBottom: '24px' }}>
-                Whether you call, WhatsApp, or fill the form — here&apos;s exactly what to expect.
-              </p>
-              <div className="after-call">
-                <div className="mini-steps">
-                  {afterCallSteps.map(({ n, title, desc }) => (
-                    <div key={n} className="mini-step">
-                      <div className="ms-num">{n}</div>
-                      <p className="ms-txt"><strong>{title}</strong><br />{desc}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="svc-note" style={{ marginTop: '22px' }}>
-                No obligation, no pushy sales. Just honest guidance on your visa options.
-              </div>
-            </div>
+          <div className="contact-form-box fade-up" style={{ maxWidth: '560px', margin: '0 auto' }}>
+            <div className="badge" style={{ marginBottom: '14px' }}>Quick Enquiry</div>
+            <h3 id="contact-form-heading" style={{ marginBottom: '6px' }}>Send Us a Message</h3>
+            <p className="sub-txt">
+              Fill in your details and we&apos;ll open WhatsApp with your message pre-filled — fast and easy.
+            </p>
+            <ContactForm />
           </div>
         </div>
       </section>
@@ -128,23 +98,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="cta-banner">
-        <div className="container">
-          <h2>Don&apos;t Wait — Start Today</h2>
-          <p>Visa slots fill up fast. The earlier you apply, the smoother the process.</p>
-          <div className="cta-btns">
-            <Link href="/contact" className="btn btn-white btn-lg">Get Free Advice</Link>
-            <a
-              href="https://wa.me/918796925533?text=Hello%2C%20I%20want%20to%20start%20my%20visa%20application."
-              target="_blank" rel="noopener"
-              className="btn btn-wa btn-lg"
-            >
-              💬 WhatsApp Us
-            </a>
-          </div>
-        </div>
-      </section>
     </>
   )
 }

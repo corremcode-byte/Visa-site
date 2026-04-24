@@ -52,7 +52,7 @@ export default function Footer() {
               <span>
                 <a href="tel:01145040637">011 4504 0637</a>
                 <br />
-                <small style={{ fontSize: '12px', color: 'rgba(255,255,255,0.40)' }}>
+                <small style={{ fontSize: '12px', color: 'rgb(255, 255, 255)' }}>
                   Mon–Sat, 10 AM – 7 PM
                 </small>
               </span>
@@ -64,7 +64,7 @@ export default function Footer() {
                   8796925533
                 </a>
                 <br />
-                <small style={{ fontSize: '12px', color: 'rgba(255,255,255,0.40)' }}>
+                <small style={{ fontSize: '12px', color: 'rgb(255, 255, 255)' }}>
                   WhatsApp Anytime
                 </small>
               </span>

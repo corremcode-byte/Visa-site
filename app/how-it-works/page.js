@@ -150,17 +150,6 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="cta-banner">
-        <div className="container">
-          <h2>Ready to Begin Your Application?</h2>
-          <p>Check your visa eligibility in 2 minutes, or just WhatsApp us your destination — we&apos;ll do the rest.</p>
-          <div className="cta-btns">
-            <Link href="/contact" className="btn btn-white btn-lg">Get Free Advice</Link>
-            <a href="https://wa.me/918796925533?text=Hello%2C%20I%20want%20to%20start%20my%20visa%20application." target="_blank" rel="noopener" className="btn btn-wa btn-lg">💬 WhatsApp Us</a>
-          </div>
-        </div>
-      </section>
     </>
   )
 }

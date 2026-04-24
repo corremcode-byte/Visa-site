@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 export default function ContactForm() {
-  const [form, setForm] = useState({ name: '', phone: '', destination: '', message: '' })
+  const [form, setForm] = useState({ name: '', phone: '', destination: '', travelDate: '', message: '' })
   const [sent, setSent] = useState(false)
 
   const set = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }))
@@ -12,6 +12,7 @@ export default function ContactForm() {
     const msg = encodeURIComponent(
       `*Contact Enquiry — Zeno Global*\n\nName: ${form.name}\nPhone: ${form.phone}` +
       (form.destination ? `\nDestination: ${form.destination}` : '') +
+      (form.travelDate ? `\nTravel Date: ${form.travelDate}` : '') +
       (form.message ? `\nMessage: ${form.message}` : '')
     )
     window.open(`https://wa.me/918796925533?text=${msg}`, '_blank')
@@ -46,6 +47,11 @@ export default function ContactForm() {
         <label htmlFor="c-dest">Destination Country</label>
         <input type="text" id="c-dest" name="destination" className="finput"
           placeholder="e.g. UK, Canada, Schengen" value={form.destination} onChange={set} />
+      </div>
+      <div className="fg">
+        <label htmlFor="c-date">Travel Date</label>
+        <input type="date" id="c-date" name="travelDate" className="finput"
+          value={form.travelDate} onChange={set} />
       </div>
       <div className="fg">
         <label htmlFor="c-msg">Your Message</label>

@@ -54,24 +54,16 @@ export default function HomePage() {
             <div>
               <div className="hero-badge">🏆 Authorised VFS Global Partner · Delhi&apos;s Most Trusted Since 2012</div>
               <h1 id="hero-heading">
-                Your Visa, <span className="hl">Handled Right.</span><br />
+                Your Visa,Handled Right.<br />
                 Stress-Free, Start to Finish.
               </h1>
-              <p className="hero-tagline">Expert Visa Consultants in New Delhi</p>
+              <p className="hero-tagline">
+                Expert Visa Consultants in New Delhi
+              </p>
               <p className="hero-sub">
                 Tourist, Business, Student &amp; more — we handle every step so you can
                 focus on your journey.
               </p>
-              <div className="hero-btns">
-                <Link href="/contact" className="btn btn-primary btn-lg">Free Consultation</Link>
-                <a
-                  href="https://wa.me/918796925533?text=Hello%2C%20I%20need%20help%20with%20my%20visa%20application."
-                  target="_blank" rel="noopener"
-                  className="btn btn-wa btn-lg"
-                >
-                  💬 WhatsApp Us
-                </a>
-              </div>
             </div>
             <div className="hero-img-wrap">
               <div className="hero-img-glow" aria-hidden="true" />
@@ -186,25 +178,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA BANNER */}
-      <section className="cta-banner">
-        <div className="container">
-          <h2>Ready to Start Your Visa Journey?</h2>
-          <p>
-            Call us, WhatsApp us, or visit our office in New Delhi — we&apos;re here to help.
-          </p>
-          <div className="cta-btns">
-            <Link href="/contact" className="btn btn-white btn-lg">Contact Us</Link>
-            <a
-              href="https://wa.me/918796925533?text=Hello%2C%20I%20want%20to%20start%20my%20visa%20application."
-              target="_blank" rel="noopener"
-              className="btn btn-wa btn-lg"
-            >
-              💬 WhatsApp Us
-            </a>
-          </div>
-        </div>
-      </section>
     </>
   )
 }
