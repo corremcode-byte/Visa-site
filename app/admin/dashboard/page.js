@@ -33,8 +33,9 @@ export default function AdminDashboard() {
   const [enquiries, setEnquiries] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
-  const [filter, setFilter] = useState('all')
-  const [search, setSearch] = useState('')
+  const [filters, setFilters] = useState([])
+  const [newCol, setNewCol] = useState('name')
+  const [newVal, setNewVal] = useState('')
 
   const fetchEnquiries = useCallback(async () => {
     setLoading(true)
@@ -69,18 +70,28 @@ export default function AdminDashboard() {
   const hotCount = enquiries.filter(e => classifyLead(e.travelDate) === 'hot').length
   const warmCount = enquiries.filter(e => classifyLead(e.travelDate) === 'warm').length
 
+  const COLS = [
+    { key: 'name',        label: 'Name' },
+    { key: 'phone',       label: 'Phone' },
+    { key: 'destination', label: 'Destination' },
+    { key: 'travelDate',  label: 'Travel Date' },
+    { key: 'lead',        label: 'Lead Type (hot/warm/cold)' },
+  ]
+
+  const addFilter = () => {
+    if (!newVal.trim()) return
+    setFilters(prev => [...prev, { col: newCol, val: newVal.trim() }])
+    setNewVal('')
+  }
+
+  const removeFilter = idx => setFilters(prev => prev.filter((_, i) => i !== idx))
+
   const filtered = enquiries.filter(e => {
     const lead = classifyLead(e.travelDate)
-    if (filter !== 'all' && lead !== filter) return false
-    if (search) {
-      const q = search.toLowerCase()
-      return (
-        e.name?.toLowerCase().includes(q) ||
-        e.phone?.toLowerCase().includes(q) ||
-        e.destination?.toLowerCase().includes(q)
-      )
-    }
-    return true
+    return filters.every(f => {
+      if (f.col === 'lead') return lead === f.val.toLowerCase()
+      return (e[f.col] || '').toLowerCase().includes(f.val.toLowerCase())
+    })
   })
 
   return (
@@ -127,26 +138,39 @@ export default function AdminDashboard() {
           </div>
         </div>
 
-        {/* Filters + Search */}
+        {/* Filters */}
         <div className="admin-toolbar">
-          <div className="admin-filters">
-            {['all', 'hot', 'warm', 'cold'].map(f => (
-              <button
-                key={f}
-                className={`admin-filter-btn ${filter === f ? 'active' : ''}`}
-                onClick={() => setFilter(f)}
-              >
-                {f === 'all' ? 'All' : LEAD_LABELS[f]}
-              </button>
-            ))}
+          <div className="admin-filter-builder">
+            <select
+              className="admin-col-select"
+              value={newCol}
+              onChange={e => setNewCol(e.target.value)}
+            >
+              {COLS.map(c => <option key={c.key} value={c.key}>{c.label}</option>)}
+            </select>
+            <input
+              type="text"
+              className="finput admin-filter-input"
+              placeholder="Enter value…"
+              value={newVal}
+              onChange={e => setNewVal(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && addFilter()}
+            />
+            <button className="btn btn-primary btn-sm" onClick={addFilter}>+ Add Filter</button>
+            {filters.length > 0 && (
+              <button className="btn btn-sm admin-clear-btn" onClick={() => setFilters([])}>Clear All</button>
+            )}
           </div>
-          <input
-            type="text"
-            className="finput admin-search"
-            placeholder="Search by name, phone, destination…"
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-          />
+          {filters.length > 0 && (
+            <div className="admin-filter-chips">
+              {filters.map((f, i) => (
+                <div key={i} className="admin-filter-chip">
+                  <span>{COLS.find(c => c.key === f.col)?.label}: <strong>{f.val}</strong></span>
+                  <button onClick={() => removeFilter(i)} aria-label="Remove filter">✕</button>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Table */}

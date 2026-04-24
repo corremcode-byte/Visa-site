@@ -55,20 +55,19 @@ export default function OtherVisasSlideshow() {
               Not every visa fits into a standard category — and that&apos;s okay. We also assist with a range of specialised visas, depending on your needs:
             </p>
 
-            <ul className="svc-list">
-              <li><strong>🔁 Transit Visa</strong><br />
-                <span style={{ color: 'var(--txt-m)', fontSize: '15px' }}>Just passing through a country? If your layover requires a transit visa, we&apos;ll help you sort it quickly and without confusion.</span>
-              </li>
-              <li><strong>🏥 Medical Visa</strong><br />
-                <span style={{ color: 'var(--txt-m)', fontSize: '15px' }}>Travelling abroad for treatment? We assist with medical visa applications for patients and their attendants, including hospital documents, treatment details, and financial proof.</span>
-              </li>
-              <li><strong>🕌 Religious Visa</strong><br />
-                <span style={{ color: 'var(--txt-m)', fontSize: '15px' }}>Planning a pilgrimage — whether it&apos;s Mecca, the Vatican, or elsewhere? We handle the specific visa requirements so you can focus on your journey.</span>
-              </li>
-              <li><strong>👨‍👩‍👧 Dependent / Family Visa</strong><br />
-                <span style={{ color: 'var(--txt-m)', fontSize: '15px' }}>Joining family abroad? We guide you through the entire process, making sure all relationship and sponsor documents are in place.</span>
-              </li>
-            </ul>
+            <div className="other-visa-list">
+              {[
+                { icon: '🔁', title: 'Transit Visa', desc: "Just passing through a country? If your layover requires a transit visa, we'll help you sort it quickly and without confusion." },
+                { icon: '🏥', title: 'Medical Visa', desc: 'Travelling abroad for treatment? We assist with medical visa applications for patients and their attendants, including hospital documents, treatment details, and financial proof.' },
+                { icon: '🕌', title: 'Religious Visa', desc: "Planning a pilgrimage — whether it's Mecca, the Vatican, or elsewhere? We handle the specific visa requirements so you can focus on your journey." },
+                { icon: '👨‍👩‍👧', title: 'Dependent / Family Visa', desc: 'Joining family abroad? We guide you through the entire process, making sure all relationship and sponsor documents are in place.' },
+              ].map(({ icon, title, desc }) => (
+                <div key={title} className="other-visa-item">
+                  <p className="other-visa-title"><strong>{icon} {title}:</strong></p>
+                  <p className="other-visa-desc">{desc}</p>
+                </div>
+              ))}
+            </div>
 
             <div className="svc-note" style={{ marginTop: '22px' }}>
               Each country has its own requirements for these visas. Once we understand your situation, we&apos;ll share a clear, personalised checklist — so you know exactly what to prepare.

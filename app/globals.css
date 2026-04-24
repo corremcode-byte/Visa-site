@@ -239,6 +239,10 @@ p{font-size:17px;line-height:1.7;color:var(--txt-b)}
 .other-dots{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:2}
 .other-dot{width:10px;height:10px;border-radius:50%;border:2px solid #fff;background:transparent;cursor:pointer;transition:background 0.3s;padding:0;-webkit-tap-highlight-color:transparent}
 .other-dot.active{background:#fff}
+.other-visa-list{display:flex;flex-direction:column;gap:16px}
+.other-visa-item{border-left:3px solid var(--g400);padding-left:14px}
+.other-visa-title{font-family:var(--font-poppins,'Poppins',sans-serif);font-weight:800 !important;font-size:16px;color:var(--txt-h);margin-bottom:4px}
+.other-visa-desc{font-size:15px;color:var(--txt-m);line-height:1.6;margin:0}
 .svc-content .badge{margin-bottom:14px}
 .svc-content h2{margin-bottom:12px}
 .svc-content>p{color:var(--txt-m);margin-bottom:20px;font-size:16px}
@@ -371,12 +375,18 @@ p{font-size:17px;line-height:1.7;color:var(--txt-b)}
 .admin-stat-card.warm{border-left:4px solid #F59E0B}
 .admin-stat-n{font-family:var(--font-poppins,'Poppins',sans-serif);font-size:32px;font-weight:800;color:var(--g700);line-height:1;margin-bottom:6px}
 .admin-stat-lbl{font-size:13px;color:var(--txt-m);font-weight:500}
-.admin-toolbar{display:flex;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap}
-.admin-filters{display:flex;gap:8px;flex-wrap:wrap}
-.admin-filter-btn{padding:7px 16px;border-radius:var(--r-f);font-size:13px;font-weight:600;font-family:var(--font-poppins,'Poppins',sans-serif);border:1.5px solid #E2E8F0;background:#fff;color:var(--txt-m);cursor:pointer;transition:var(--tr-f)}
-.admin-filter-btn:hover{border-color:var(--g300);color:var(--g700)}
-.admin-filter-btn.active{background:var(--g600);color:#fff;border-color:var(--g600)}
-.admin-search{max-width:280px;background:#fff;border-color:#E2E8F0}
+.admin-toolbar{display:flex;flex-direction:column;gap:12px;margin-bottom:18px}
+.admin-filter-builder{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.admin-col-select{height:42px;padding:0 14px;border-radius:var(--r-f);border:1.5px solid #E2E8F0;background:#fff;font-size:14px;color:var(--txt-h);cursor:pointer;font-family:inherit;outline:none}
+.admin-col-select:focus{border-color:var(--g400)}
+.admin-filter-input{width:200px;height:42px;margin-bottom:0}
+.admin-clear-btn{background:#fff;border:1.5px solid #E2E8F0;color:var(--txt-m);font-size:13px}
+.admin-clear-btn:hover{border-color:#EF4444;color:#EF4444}
+.admin-filter-chips{display:flex;gap:8px;flex-wrap:wrap}
+.admin-filter-chip{display:inline-flex;align-items:center;gap:8px;background:var(--g50);color:var(--g800);border:1.5px solid var(--g200);padding:5px 8px 5px 14px;border-radius:var(--r-f);font-size:13px;font-weight:500}
+.admin-filter-chip strong{font-weight:700;color:var(--g700)}
+.admin-filter-chip button{display:flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--g200);color:var(--g800);font-size:11px;font-weight:700;cursor:pointer;transition:var(--tr-f);flex-shrink:0}
+.admin-filter-chip button:hover{background:#EF4444;color:#fff}
 .admin-empty{background:#fff;border-radius:var(--r-lg);padding:56px 24px;text-align:center;color:var(--txt-m);font-size:15px;border:1px dashed #CBD5E1}
 .admin-table-wrap{background:#fff;border-radius:var(--r-lg);border:1px solid #E2E8F0;overflow-x:auto;box-shadow:var(--sh-sm)}
 .admin-table{width:100%;border-collapse:collapse;font-size:14px}
@@ -404,10 +414,9 @@ p{font-size:17px;line-height:1.7;color:var(--txt-b)}
   .admin-stat-n{font-size:24px}
   .admin-header-inner{padding:0 14px;gap:8px;flex-wrap:wrap;height:auto;min-height:56px;padding-top:10px;padding-bottom:10px}
   .admin-header-brand div:first-child{font-size:14px}
-  .admin-toolbar{flex-direction:column;align-items:stretch;gap:10px}
-  .admin-filters{flex-wrap:wrap}
-  .admin-filter-btn{padding:6px 12px;font-size:12px}
-  .admin-search{max-width:100%;width:100%}
+  .admin-filter-builder{flex-direction:column;align-items:stretch}
+  .admin-col-select,.admin-filter-input{width:100%}
+  .admin-filter-input{width:100%}
   .admin-login-card{padding:28px 20px}
   .admin-table-wrap{border-radius:var(--r-md);overflow-x:visible}
   .admin-table thead{display:none}
