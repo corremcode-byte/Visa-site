@@ -73,29 +73,6 @@ export default function FAQPage() {
         </div>
       </section>
 
-      {/* STILL HAVE QUESTIONS */}
-      <section className="section section-white" aria-labelledby="more-qs-heading">
-        <div className="container">
-          <div className="sec-hdr fade-up" style={{ maxWidth: '640px' }}>
-            <div className="badge">Still Unsure?</div>
-            <h2 id="more-qs-heading">Can&apos;t Find Your Answer?</h2>
-            <p>
-              Every visa case is different. If your question isn&apos;t here, just reach out — we&apos;ll give
-              you a straight answer based on your specific situation.
-            </p>
-            <div className="cta-btns" style={{ justifyContent: 'center', marginTop: '28px' }}>
-              <Link href="/contact" className="btn btn-primary">Contact Us</Link>
-              <a
-                href="https://wa.me/918796925533?text=Hello%2C%20I%20have%20a%20question%20about%20my%20visa."
-                target="_blank" rel="noopener"
-                className="btn btn-wa"
-              >
-                💬 Ask on WhatsApp
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
 
     </>
   )
