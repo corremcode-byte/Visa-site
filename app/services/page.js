@@ -42,7 +42,7 @@ export default function ServicesPage() {
             <div className="svc-img-wrap fade-up">
               <Image src="/tourist.png" alt="Family enjoying a holiday — Tourist Visa Services"
                 width={560} height={370} loading="lazy"
-                style={{ width: '100%', height: '370px', objectFit: 'cover', borderRadius: '28px', boxShadow: 'var(--sh-lg)' }} />
+                style={{ width: '100%', height: 'auto', aspectRatio: '3/2', objectFit: 'cover', borderRadius: '28px', boxShadow: 'var(--sh-lg)' }} />
               <div className="svc-img-badge">✈️ Tourist Visa</div>
             </div>
             <div className="svc-content fade-up">
@@ -85,7 +85,7 @@ export default function ServicesPage() {
             <div className="svc-img-wrap fade-up">
               <Image src="/business.png" alt="Business professionals travelling — Business Visa Services"
                 width={560} height={370} loading="lazy"
-                style={{ width: '100%', height: '370px', objectFit: 'cover', borderRadius: '28px', boxShadow: 'var(--sh-lg)' }} />
+                style={{ width: '100%', height: 'auto', aspectRatio: '3/2', objectFit: 'cover', borderRadius: '28px', boxShadow: 'var(--sh-lg)' }} />
               <div className="svc-img-badge">💼 Business Visa</div>
             </div>
             <div className="svc-content fade-up">
@@ -135,7 +135,7 @@ export default function ServicesPage() {
             <div className="svc-img-wrap fade-up">
               <Image src="/student.png" alt="Indian student at a university abroad — Student Visa Services"
                 width={560} height={370} loading="lazy"
-                style={{ width: '100%', height: '370px', objectFit: 'cover', borderRadius: '28px', boxShadow: 'var(--sh-lg)' }} />
+                style={{ width: '100%', height: 'auto', aspectRatio: '3/2', objectFit: 'cover', borderRadius: '28px', boxShadow: 'var(--sh-lg)' }} />
               <div className="svc-img-badge">🎓 Student Visa</div>
             </div>
             <div className="svc-content fade-up">
@@ -175,7 +175,7 @@ export default function ServicesPage() {
             <div className="svc-img-wrap fade-up">
               <Image src="/transit visa.png" alt="Traveller at airport transit — Transit Visa Services"
                 width={560} height={370} loading="lazy"
-                style={{ width: '100%', height: '370px', objectFit: 'cover', borderRadius: '28px', boxShadow: 'var(--sh-lg)' }} />
+                style={{ width: '100%', height: 'auto', aspectRatio: '3/2', objectFit: 'cover', borderRadius: '28px', boxShadow: 'var(--sh-lg)' }} />
               <div className="svc-img-badge">🔁 Transit Visa</div>
             </div>
             <div className="svc-content fade-up">
@@ -212,7 +212,7 @@ export default function ServicesPage() {
             <div className="svc-img-wrap fade-up">
               <Image src="/Medical visa.png" alt="Patient travelling for medical treatment — Medical Visa Services"
                 width={560} height={370} loading="lazy"
-                style={{ width: '100%', height: '370px', objectFit: 'cover', borderRadius: '28px', boxShadow: 'var(--sh-lg)' }} />
+                style={{ width: '100%', height: 'auto', aspectRatio: '3/2', objectFit: 'cover', borderRadius: '28px', boxShadow: 'var(--sh-lg)' }} />
               <div className="svc-img-badge">🏥 Medical Visa</div>
             </div>
             <div className="svc-content fade-up">
@@ -250,7 +250,7 @@ export default function ServicesPage() {
             <div className="svc-img-wrap fade-up">
               <Image src="/religious.jpeg" alt="Pilgrims on a religious journey — Religious Visa Services"
                 width={560} height={370} loading="lazy"
-                style={{ width: '100%', height: '370px', objectFit: 'cover', borderRadius: '28px', boxShadow: 'var(--sh-lg)' }} />
+                style={{ width: '100%', height: 'auto', aspectRatio: '3/2', objectFit: 'cover', borderRadius: '28px', boxShadow: 'var(--sh-lg)' }} />
               <div className="svc-img-badge">🕌 Religious Visa</div>
             </div>
             <div className="svc-content fade-up">
@@ -288,7 +288,7 @@ export default function ServicesPage() {
             <div className="svc-img-wrap fade-up">
               <Image src="/family visa.png" alt="Family reuniting abroad — Dependent and Family Visa Services"
                 width={560} height={370} loading="lazy"
-                style={{ width: '100%', height: '370px', objectFit: 'cover', borderRadius: '28px', boxShadow: 'var(--sh-lg)' }} />
+                style={{ width: '100%', height: 'auto', aspectRatio: '3/2', objectFit: 'cover', borderRadius: '28px', boxShadow: 'var(--sh-lg)' }} />
               <div className="svc-img-badge">👨‍👩‍👧 Family Visa</div>
             </div>
             <div className="svc-content fade-up">
